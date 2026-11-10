@@ -1,0 +1,93 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: azure;
+}
+
+.online_shop {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product_page{
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product_image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.product_name {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.product_price {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  margin-top: auto;
+}
+
+button{
+Background-color: #4CAF50;
+color: white;
+Padding: 10px 20px;
+Border-radius: 5px;
+}
+
+button:hover{
+  animation: colorshift 0.2s ease-in-out forwards;
+}
+
+@keyframes colorshift{
+  0%{
+    background-color: #4CAF50;
+  }
+
+  50%{
+    background-color: #409142;
+  }
+
+  100%{
+    background-color: #327134;
+  }
+}
+
+/* Responsive Media Queries */
+
+/* Tablet (Max Width: 768px): 2 cards per row */
+@media (max-width: 768px) {
+  .product-grid {
+    max-width: 660px;
+  }
+}
+
+/* Mobile (Max Width: 480px): 1 card per row */
+@media (max-width: 480px) {
+  .product-grid {
+    max-width: 320px;
+  }
+}
